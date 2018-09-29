@@ -9,6 +9,7 @@ class First extends Component {
   }
 
   render() {
+    console.log('component props', this.props)
     return (
       <div>
         <p>{this.props.test}</p>
