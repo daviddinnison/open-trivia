@@ -5,6 +5,7 @@ This template is designed for React developers who want a template that integrat
 - [Installation](#installation)
 - [Working on the project](#working-on-the-project)
 
+
 ### Installation
 
 - Clone this repository: `git clone https://github.com/daviddinnison/react-redux-template`

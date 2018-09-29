@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { test } from '../redux/actions/first';
+import { test, dataRequest } from '../redux/actions/first';
 
 class First extends Component {
   componentDidMount() {
-    this.props.dispatch(test());
+    // this.props.dispatch(test()); tests to make sure actions/sagas/reducer is working
+    this.props.dispatch(dataRequest());
   }
 
   render() {
@@ -18,6 +19,8 @@ class First extends Component {
 
 const mapStateToProps = state => {
   return {
+    data: state.first.data,
+    error: state.first.error,
     test: state.first.test
   };
 };
