@@ -1,6 +1,6 @@
 import React from 'react';
-import RegistrationForm from '../02-views/RegistrationForm';
-import { registerRequest } from '../../redux/actions/registration/registration';
+import RegistrationForm from '../../02-views/registration/RegistrationForm';
+import { registerRequest } from '../../../redux/actions/registration/registration';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 

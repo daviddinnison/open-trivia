@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 
-import First from './components/First';
-import Second from './components/Second';
+import Home from './components/Home';
 
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Route exact path="/" component={First} />
-        <Route exact path="/second" component={Second} />
+        <Route exact path="/" component={Home} />
       </div>
     );
   }
