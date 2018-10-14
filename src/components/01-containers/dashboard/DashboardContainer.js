@@ -8,6 +8,7 @@ import userData from '../../../data/dummy/user';
 
 // component imports
 import DashboardView from '../../02-views/dashboard/DashboardView';
+import CategoriesContainer from '../../01-containers/dashboard/CategoriesContainer';
 
 class DashboardContainer extends Component {
   componentDidMount() {
@@ -15,15 +16,15 @@ class DashboardContainer extends Component {
   }
 
   render() {
-    if (this.props.data) {
-      console.log('user data in comp', this.props.data);
+    const {data} = this.props;
+    if (data.user) {
       return (
         <div>
           <DashboardView />
+          <CategoriesContainer categories={data.user.categories}/>
         </div>
       );
     } else {
-      console.log('loading user data', this.props.data);
       return <p>Loading</p>;
     }
   }

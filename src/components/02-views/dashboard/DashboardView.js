@@ -1,6 +1,6 @@
 import React from 'react';
 
-let DashboardView = props => {
+const DashboardView = props => {
   return (
     <div>
       <h1>Dashboard</h1>
