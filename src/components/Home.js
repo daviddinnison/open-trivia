@@ -4,10 +4,11 @@ import { connect } from 'react-redux';
 import RegistrationContainer from './01-containers/registration/RegistrationContainer';
 import DashboardContainer from './01-containers/dashboard/DashboardContainer';
 
+import userData from '../data/dummy/user';
+
 class Home extends Component {
   conditionalLogIn() {
-    if (this.props.user.loggedIn) {
-      console.log('user is logged in');
+    if (this.props.loggedIn) {
       return <DashboardContainer />;
     }
     return <RegistrationContainer />;
@@ -20,7 +21,7 @@ class Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    user: state.user
+    loggedIn: state.user.loggedIn
   };
 };
 

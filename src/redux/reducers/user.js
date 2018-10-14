@@ -1,13 +1,21 @@
+import { USER_DATA_REQUEST } from '../actions/user/user';
+
+
 
 const initialState = {
-  loggedIn: false
+  loggedIn: true,
+  data: {
+    name: '',
+    favorites: ''
+  }
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case 'DATA_FAILED': {
+    case 'USER_DATA_REQUEST': {
+      console.log('you are in the reducer', action.data);
       return Object.assign({}, state, {
-        error: action.message
+        data: action.data
       });
     }
    
