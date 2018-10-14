@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import PropTypes from 'prop-types';
 
 let RegistrationForm = props => {
   const { handleSubmit } = props;
@@ -16,6 +17,10 @@ let RegistrationForm = props => {
       <button type="submit">Submit</button>
     </form>
   );
+};
+
+RegistrationForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
 };
 
 RegistrationForm = reduxForm({

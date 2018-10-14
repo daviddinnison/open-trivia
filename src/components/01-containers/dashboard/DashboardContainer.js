@@ -1,6 +1,8 @@
 // module imports
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+
 
 //actions
 import { userDataRequest } from '../../../redux/actions/user/user';
@@ -20,7 +22,7 @@ class DashboardContainer extends Component {
     if (data.user) {
       return (
         <div>
-          <DashboardView />
+          <DashboardView name={data.user.name}/>
           <CategoriesContainer categories={data.user.categories}/>
         </div>
       );

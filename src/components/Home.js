@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import RegistrationContainer from './01-containers/registration/RegistrationContainer';
 import DashboardContainer from './01-containers/dashboard/DashboardContainer';
@@ -23,6 +24,10 @@ const mapStateToProps = state => {
   return {
     loggedIn: state.user.loggedIn
   };
+};
+
+Home.propTypes = {
+  loggedIn: PropTypes.bool.isRequired
 };
 
 export default connect(mapStateToProps)(Home);

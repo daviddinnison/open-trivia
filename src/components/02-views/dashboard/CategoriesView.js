@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const renderCategories = categories => {
   const categoriesMap = categories.map((cat, i) => {
@@ -19,6 +20,10 @@ const CategoriesView = props => {
       {renderCategories(props.categories)}
     </div>
   );
+};
+
+CategoriesView.propTypes = {
+  categories: PropTypes.array.isRequired
 };
 
 export default CategoriesView;
