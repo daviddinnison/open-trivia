@@ -18,6 +18,7 @@ const CategoriesView = props => {
     <div>
       <h2>Categories</h2>
       {renderCategories(props.categories)}
+      <p>test</p>
     </div>
   );
 };
